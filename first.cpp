@@ -2,6 +2,6 @@
 using namespace std;
 
 int main() {
-    cout << "31 cek yarrak" << endl;
+    cout << "amcuksikyarrakdassak31" << endl;
     return 0;
 }
