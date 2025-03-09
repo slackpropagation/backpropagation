@@ -8,9 +8,9 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/<executable file>",
+            "program": "https://github.com/cetoeiro/backpropagation/blob/main/first.cpp",
             "args": [],
-            "cwd": "${workspaceFolder}"
+            "cwd": "https://github.com/cetoeiro/backpropagation/tree/main"
         }
     ]
 }
