@@ -2,17 +2,11 @@
 using namespace std;
 
 int main() {
-    int n;
-    cin >> n;
-    int a[n];
-    for (int i = 0; i < n; i++) cin >> a[i];
-    int ans = 0;
-    for (int i = 0; i < n; i++) {
-        int j = i;
-        while (j < n && a[j] == 1) j++;
-        ans = max(ans, j - i);
-        i = j;
-    }
-    cout << ans << endl;
+    int a, b;
+    cout << "Enter a number: "; 
+    cin >> a;
+    cout << "Enter another number: ";
+    cin >> b;
+    cout << "The sum of " << a << " and " << b << " is " << a + b << endl;
     return 0;
 }
