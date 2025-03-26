@@ -1,12 +1,15 @@
 #include <iostream>
-using namespace std;
+#include <queue>
 
 int main() {
-    int a, b;
-    cout << "Enter a number: "; 
-    cin >> a;
-    cout << "Enter another number: ";
-    cin >> b;
-    cout << "The sum of " << a << " and " << b << " is " << a + b << endl;
-    return 0;
+    std::priority_queue<int> maxHeap;
+
+    maxHeap.push(10);
+    maxHeap.push(5);
+    maxHeap.push(20);
+
+    std::cout << "Top: " << maxHeap.top() << std::endl; // 20
+
+    maxHeap.pop(); // removes 20
+    std::cout << "Top after pop: " << maxHeap.top() << std::endl; // 10
 }
