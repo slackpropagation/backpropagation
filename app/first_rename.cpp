@@ -1,15 +1,30 @@
 #include <iostream>
-#include <queue>
+using namespace std;
+
+// Transfer function WITHOUT reference
+void transfer(int from, int to, int amount) {
+    if (from >= amount) {
+        from -= amount;
+        to += amount;
+        cout << "Transferred $" << amount << " successfully!" << endl;
+    } else {
+        cout << "Not enough money to transfer!" << endl;
+    }
+}
 
 int main() {
-    std::priority_queue<int> maxHeap;
+    int wallet = 50;
+    int bank = 1000;
 
-    maxHeap.push(10);
-    maxHeap.push(5);
-    maxHeap.push(20);
+    cout << "Before transfer:" << endl;
+    cout << "Wallet: $" << wallet << endl;
+    cout << "Bank:   $" << bank << endl;
 
-    std::cout << "Top: " << maxHeap.top() << std::endl; // 20
+    transfer(wallet, bank, 20);  // Tries to move $20
 
-    maxHeap.pop(); // removes 20
-    std::cout << "Top after pop: " << maxHeap.top() << std::endl; // 10
+    cout << "After transfer:" << endl;
+    cout << "Wallet: $" << wallet << endl;
+    cout << "Bank:   $" << bank << endl;
+
+    return 0;
 }
